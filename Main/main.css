@@ -28,20 +28,40 @@ header {
     -50%
   ); /* Align the center of the navbar with the center of the screen */
   bottom: 25px; /* 15px from the bottom */
-  background-color: #343a40; /* dark background, assuming you want to use the Bootstrap dark color */
+  background-color: rgba(0,0,0,.3); /* dark background, assuming you want to use the Bootstrap dark color */
   border-radius: 15px; /* Rounded corners */
   z-index: 100; /* Keeps the nav bar above other elements */
   padding: 5px; /* Optional: add padding inside the navbar */
   display: flex; /* Use flexbox to align links */
   gap: 5px; /* Optional: add gaps between links */
   justify-content: center; /* Center the flex items (links) */
+  font-size: large;
+  flex-wrap: nowrap;
+  
 }
 
 #invisible-nav .nav-link {
   color: white; /* Set the color of the nav links to white */
   text-decoration: none; /* Removes the underline from links */
-  padding: 5px 10px; /* Adjust the padding for the links */
+  padding: 10px 20px;
 }
+
+/* Add a CSS class for the clicked elements */
+.nav-link.clicked {
+  background-color: cornflowerblue; /* Change the background color as desired */
+  color: white; /* Set the text color to white */
+  border-radius: 50%; /* Create a circular background */
+  padding: 10px 20px;
+  transition: all 0.3s; /* Add a smooth transition effect */
+}
+
+/* Reset the styles when the mouse is not clicking anymore (optional) */
+.nav-link:not(.clicked):hover {
+  cursor: pointer;
+  opacity: 0.7; /* You can change the opacity on hover */
+}
+
+
 
 #invisible-nav .nav-link:hover {
   text-decoration: cornflowerblue;
@@ -78,7 +98,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* Align content to the top */
-  padding-top: 80px; /* Add padding at the top of the header */
+  padding-top: 40px; /* Add padding at the top of the header */
   padding-bottom: 20px; /* Add padding at the bottom of the header for spacing */
 }
 
@@ -95,14 +115,7 @@ header {
 }
 
 .me {
-  margin-top: 100px;
-}
-
-section {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 50px;
 }
 
 #about {
@@ -126,7 +139,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0; /* Added padding to each section */
 }
 
 /* You might want to adjust the footer separately */
@@ -164,5 +176,9 @@ footer#footer .rounded-container {
 
 .about-button:hover {
   background-color: transparent; /* Background color on hover */
-  color: #2367b4; /* Text color on hover */
+  color: white ; /* Text color on hover */
+}
+
+#home {
+  margin-bottom: 110px;
 }

@@ -15,15 +15,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".nav-link").click(function() {
+          // Remove the "clicked" class from all elements
+          $(".nav-link").removeClass("clicked");
+          // Add the "clicked" class to the clicked element
+          $(this).addClass("clicked");
+        });
+      });
+    </script>
   </head>
 
   <body>
-    <nav id="invisible-nav" class="navbar bg-dark">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#experience" class="nav-link">Experience</a>
-      <a href="#portfolio" class="nav-link">Portfolio</a>
-      <a href="#contact" class="nav-link">Contact</a>
+    <nav id="invisible-nav" class="navbar">
+      <a href="#home" class="nav-link"><i class="fa-solid fa-house-chimney"></i></a>
+      <a href="#about" class="nav-link"><i class="fa-solid fa-user-astronaut"></i></a>
+      <a href="#experience" class="nav-link"><i class="fa-solid fa-book"></i></a>
+      <a href="#portfolio" class="nav-link"><i class="fa-solid fa-square-poll-vertical"></i></a>
+      <a href="#contact" class="nav-link"><i class="fa-regular fa-envelope"></i></a>
     </nav>
     <header id="home">
       <div class="container header_container text-center">
